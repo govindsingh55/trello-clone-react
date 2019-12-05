@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animate-medium {
+    /* Quick on the way out */
+    transition: 0.5s;
+}
+
+.animate-ease-out {
+  /* This timing applies on the way OUT */
+  transition-timing-function: ease-in;
+}
+
+.animate-ease-in {
+  /* This timing applies on the way OUT */
+  transition-timing-function: ease-out;
+}
+
+@responsive {
+  .animate-hide {
+    /* Hide thing by pushing it outside by default */
+    transform: translateX(-100%);
+  }
+  
+  .animate-show {
+    /* show thing by pulliig it inside by default */
+    transform: translateX(0);
+  }
+}
